@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <title>BlogCafé</title>
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1 class="centrar no-margin" >Contacto</h1>
+
+        <div class="contenido--imagen"></div>
+
+
+        <form action="POST" class="formulario">
+            <div class="campos">
+                <!-- FOR para sepa el Label a que input pertecene segun el ID -->
+
+                <label class="campo--label"  for="nombre">Nombre</label>
+                <input class="input--text" l type="text" placeholder="nombre" id="nombre">
+
+            </div>
+            <div class="campos">
+                
+                <!-- FOR para sepa el Label a que input pertecene segun el ID -->
+                <label class="campo--label" for="mail">Email</label>
+                <input class="input--text" type="email" placeholder="nombre" id="mail">
+            </div>
+            <div class="campos">
+                
+                <!-- FOR para sepa el Label a que input pertecene segun el ID -->
+                <label class="campo--label" for="msj">Mensaje</label>
+                
+                <!-- DIFERENTE AL RESTO  -->
+
+                <textarea class="input--text input--text__tarea" name="" id="msj" cols="30" rows="10" ></textarea>
+
+            </div>
+            <div class="campos botones">
+                <button class="boton">Enviar</button>
+                
+                <input type="submit" name="Boton" value="Boton" class="boton">
+            </div>
+            
+        </form>
+    </main>
+
+
+
+
+
+</body>
+
+</html>
