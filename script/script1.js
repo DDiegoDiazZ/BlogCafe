@@ -1,5 +1,10 @@
+"use strict";
 
+const nuevo = document.createElement('A');
+nuevo.textContent = "Nuevo";
+nuevo.href= "www.google.com";
+nuevo.hidden = true;
 
-const nuevo = document.createElement('A')
 
 console.log(nuevo);
+
