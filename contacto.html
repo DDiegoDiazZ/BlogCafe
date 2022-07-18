@@ -21,7 +21,7 @@
 
 <body>
     <main class="contenedor">
-        <h1 class="centrar no-margin" >Contacto</h1>
+        <h1 class="centrar no-margin">Contacto</h1>
 
         <div class="contenido--imagen"></div>
 
@@ -30,39 +30,44 @@
             <div class="campos">
                 <!-- FOR para sepa el Label a que input pertecene segun el ID -->
 
-                <label class="campo--label"  for="nombre">Nombre</label>
+                <label class="campo--label" for="nombre">Nombre</label>
                 <input class="input--text" l type="text" placeholder="nombre" id="nombre">
 
             </div>
             <div class="campos">
-                
+
                 <!-- FOR para sepa el Label a que input pertecene segun el ID -->
                 <label class="campo--label" for="mail">Email</label>
                 <input class="input--text" type="email" placeholder="nombre" id="mail">
             </div>
             <div class="campos">
-                
+
                 <!-- FOR para sepa el Label a que input pertecene segun el ID -->
                 <label class="campo--label" for="msj">Mensaje</label>
-                
+
                 <!-- DIFERENTE AL RESTO  -->
 
-                <textarea class="input--text input--text__tarea" name="" id="msj" cols="30" rows="10" ></textarea>
+                <textarea class="input--text input--text__tarea" name="" id="msj" cols="30" rows="10"></textarea>
 
             </div>
-            <div class="campos botones">
-                <button class="boton">Enviar</button>
-                
-                <input type="submit" name="Boton" value="Boton" class="boton">
+            <div class="campos">
+                <input type="checkbox" id="verde" class="green">
+                <input type="checkbox" id="rojo">
+                <input type="checkbox" id="amarillo">
             </div>
-            
+
+            <div class="campos botones">
+                <!-- <button class="boton">Enviar</button> -->
+                <input type="submit" data-nro="3" name="Boton" value="Boton" class="boton">
+            </div>
+
         </form>
     </main>
 
 
 
 
-
+    <script src="/script/script2.js"></script>
 </body>
 
 </html>

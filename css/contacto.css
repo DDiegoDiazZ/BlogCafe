@@ -1,38 +1,44 @@
-html{
+html {
     box-sizing: border-box;
 
     font-size: 62.5%;
 }
 
-*,*:before,*:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-        /* UTILIDADES */
-        .no-margin{
-            margin: 0;
-        }
-        .no-padding{
-            padding: 0;
-        }
-        
-        .centrar{
-            text-align: center;
-        }
-        
 
-        img{
-            max-width: 100%;
-        }
-        h1{
-            font-size: 3rem;
-        }
+/* UTILIDADES */
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar {
+    text-align: center;
+}
 
 
-.contenedor{
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+.contenedor {
     width: 80%;
     margin: 1rem auto;
 }
-.contenido--imagen{
+
+.contenido--imagen {
     background-image: url(../img/contacto.jpg);
     background-repeat: no-repeat;
     height: 35rem;
@@ -40,27 +46,31 @@ html{
     background-size: cover;
     background-position: center center;
 }
-.formulario{
-    
+
+.formulario {
+
     width: 90%;
     margin: 0 auto;
     margin-top: -12rem;
-   
+
     border-radius: 20px;
     background-color: rgb(255, 251, 244);
     padding: 3rem;
-    
+
 }
-.campos{
+
+.campos {
     display: flex;
     margin-bottom: 2rem;
     column-gap: 2rem;
 
 }
-.campos:last-of-type{
+
+.campos:last-of-type {
     margin-bottom: 0rem;
 }
-.campo--label{
+
+.campo--label {
 
     /* PRIMER VALOR -> PARA QUE NO CRESCA( FACTOR DE CRECIMIENTO)
     SEGUNDO VALOR -> PARA QUE NO SEA MAS CHICO
@@ -69,25 +79,54 @@ html{
     flex: 0 0 9rem;
     text-align: right;
     font-size: 2rem;
-    
+
 }
-.input--text{
+
+.input--text {
     flex: 1;
     background-color: transparent;
-    border: 1px solid #5a5959 ;
-    
+    border: 1px solid #5a5959;
+
     /* width: 70%; */
 }
 
-.boton{
+.boton {
     border: none;
     background-color: black;
     color: white;
     font-size: 2rem;
     padding: 1rem 2rem;
 }
-.botones{
+
+.botones {
 
     justify-content: center;
 }
 
+
+
+.bg-verde {
+    background-color: greenyellow;
+}
+
+.bg-rojo {
+    background-color: red;
+}
+
+.bg-amarillo {
+    background-color: yellow;
+}
+
+
+/* CLASS ERROR  */
+
+.error {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+
+}
