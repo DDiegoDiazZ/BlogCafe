@@ -4,23 +4,23 @@ const btnEnviar = document.querySelector('[data-nro="3"]');
 const chckVerde = document.querySelector('#verde');
 const chckRojo = document.querySelector('#rojo');
 const chckAmarillo = document.querySelector('#verde');
-const inptNombre =  document.querySelector('#nombre');
-const inptEmail =  document.querySelector('#mail');
-const txtMsj =  document.querySelector('#msj');
-const formulario =document.querySelector('.formulario');
+const inptNombre = document.querySelector('#nombre');
+const inptEmail = document.querySelector('#mail');
+const txtMsj = document.querySelector('#msj');
+const formulario = document.querySelector('.formulario');
 
 // OBJETO DATA
 const data = {
-    nombre : "",
-    mail : "",
-    msj : ""
+    nombre: "",
+    mail: "",
+    msj: ""
 }
 
 
 // chckVerde.checked = true;
 //btnEnviar.addEventListener('click', (e) => {
-    //EL PARAMETRO e HACE REFERENCIA AL EVENTO QUE ESTA OCURRIENDO Y PASA 
-    //AUTOMATICAMENTE
+//EL PARAMETRO e HACE REFERENCIA AL EVENTO QUE ESTA OCURRIENDO Y PASA 
+//AUTOMATICAMENTE
 //    e.preventDefault();
 //    console.log(e);
 //});
@@ -40,9 +40,9 @@ chckVerde.addEventListener('click', function (e) {
 // A LA FUNCION CON ADDEVENT LISTENER NO ES NECESARIO PASARLE ARGUMENTO
 // EL ARGUMENTO PASA SOLO ( QUE ES EL EVENTO)
 
-inptNombre.addEventListener('input',leerText);
-inptEmail.addEventListener('input',leerText);
-txtMsj.addEventListener('input',leerText);
+inptNombre.addEventListener('input', leerText);
+inptEmail.addEventListener('input', leerText);
+txtMsj.addEventListener('input', leerText);
 
 function leerText(e) {
     data[this.id] = this.value; //AGREGANDO A NUESTRO OBJETO VALUES DEL FORM
@@ -51,31 +51,47 @@ function leerText(e) {
 
 
 // EVENTO SUBMIT
-formulario.addEventListener('submit',function (e) {
+formulario.addEventListener('submit', function (e) {
     e.preventDefault();
 
     //Validar Formulario
-    const {nombre, mail, msj} = data;
+    const { nombre, mail, msj } = data;
 
     if (nombre == '') {
-        mostrarMensaje('Completa el nombre');
+        alerta('Completa el nombre', false);
         return false; // CORTA LA EJECUCION DEL CODIGO DE ABAJO 
     }
 
     if (mail == '') {
-        mostrarMensaje('Completa el email');
+        alerta('Completa el email', false);
         return false; // CORTA LA EJECUCION DEL CODIGO DE ABAJO 
     }
 
     if (msj == '') {
-        mostrarMensaje('Completa el mensaje');
+        alerta('Completa el mensaje', false);
         return false; // CORTA LA EJECUCION DEL CODIGO DE ABAJO 
     }
 
-    success('Formulario Enviado');
+    alerta('Formulario Enviado');
 });
+// -----------------------------------------------------------------------------------------
 
+function alerta(msj, type = true) { // FUNCION REFACTORIZADA
+    const element = document.createElement('P');
+    element.textContent = msj;
+    element.classList.add('alerta');
+    if (type) {
+        element.style.backgroundColor = 'green';
+    } else {
+        element.style.backgroundColor = 'red';
+    }
+    formulario.appendChild(element);
+    setTimeout(() => {
+        element.remove();
+    }, 2000);
+}
 
+// -----------------------------------------------------------------------------------------
 function mostrarMensaje(msj) {
     const elemento = document.createElement('P');
     elemento.textContent = msj;
@@ -95,5 +111,5 @@ function success(msj) {
     setTimeout(() => {
         element.remove();
     }, 2000);
-    
+
 }
